@@ -1,0 +1,13 @@
+[
+  {
+    "id": "nightcode",
+    "title": "Night Code",
+    "time": {
+      "start": "07:00",
+      "end": "10:00"
+    },
+    "weekdayAll": true,
+    "weekdays": ["All"],
+    "isImportant": true
+  }
+]
