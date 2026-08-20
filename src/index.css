@@ -11,3 +11,7 @@ body {
   color: #f9fafb;
   font-family: "Sora";
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
