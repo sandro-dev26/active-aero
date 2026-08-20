@@ -52,7 +52,7 @@ function Schedule() {
                     <h4>Weekdays:</h4>
                     <ul>
                       {item.weekdays.map((weekday) => (
-                        <li>{weekday}</li>
+                        <li key={weekday.toLowerCase()}>{weekday}</li>
                       ))}
                     </ul>
                   </div>
