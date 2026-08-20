@@ -1,1 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Sora:wght@100..800&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --font-oxanium: "Oxanium";
+}
+
+body {
+  background-color: #030712;
+  color: #f9fafb;
+  font-family: "Sora";
+}
