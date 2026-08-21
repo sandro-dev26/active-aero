@@ -10,15 +10,7 @@ function Schedule() {
   return (
     <article className="mt-12 p-2 text-md md:text-lg lg:text-xl">
       <h2
-        style={
-          showFull
-            ? {
-                color: "#00c950",
-                paddingLeft: "0.5rem",
-              }
-            : {}
-        }
-        className="flex items-center gap-2 text-xl md:text-2xl hover:-translate-y-1 hover:bg-gray-700 hover:p-2 hover:rounded-sm transition-all duration-300"
+        className={`flex items-center gap-2 text-xl md:text-2xl hover:-translate-y-1 hover:bg-gray-700 hover:p-2 hover:rounded-sm transition-all duration-300 ${showFull ? "text-green-500 pl-2" : ""}`}
         onClick={handleShow}
       >
         <CalendarCheck2 size={24} stroke="currentColor" /> Schedule
@@ -28,21 +20,11 @@ function Schedule() {
           data.map((item) => (
             <li
               key={item.id}
-              style={
-                showFull
-                  ? {
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      alignItems: "flex-start",
-                    }
-                  : {}
-              }
-              className="flex items-center justify-between bg-gray-900 hover:bg-gray-700 p-2 rounded-xs transition-all duration-300"
+              className={`flex items-center justify-between bg-gray-900 hover:bg-gray-700 p-2 rounded-xs transition-all duration-300 ${showFull && "flex-col justify-center items-start"}`}
             >
               <h3>{item.title}</h3>
               <div
-                style={showFull ? { flexDirection: "column" } : {}}
-                className="flex gap-4 md:gap-6 lg:gap-8"
+                className={`flex gap-4 md:gap-6 lg:gap-8 ${showFull && "flex-col"}`}
               >
                 <p>
                   {item.time.start} - {item.time.end}
