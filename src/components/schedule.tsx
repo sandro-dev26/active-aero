@@ -36,7 +36,7 @@ function Schedule() {
                 {showFull ? (
                   <div>
                     <h4>Weekdays:</h4>
-                    <ul>
+                    <ul className="text-sm md:text-md lg:text-lg">
                       {item.weekdays.map((weekday) => (
                         <li key={weekday.toLowerCase()}>{weekday}</li>
                       ))}
