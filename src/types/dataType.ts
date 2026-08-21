@@ -1,6 +1,13 @@
 export interface ScheduleType {
   id: string; // id should be all lowercase, eg: morningcoding
   title: string; // title can be anything you want, eg: "Morning Coding"
+  activityType:
+    | "code" // coding/developer times
+    | "physical" // physical activity
+    | "recovery" // rest after activity
+    | "mandatory" // activity type that doesn't match any other and you don't want to include but have to
+    | "free time" // free time of the day
+    | "buffer"; // non-active things such as gaps between things
   time: {
     start: string;
     end: string;
