@@ -7,7 +7,8 @@ export interface ScheduleType {
     | "recovery" // rest after activity
     | "mandatory" // activity type that doesn't match any other and you don't want to include but have to
     | "free time" // free time of the day
-    | "buffer"; // non-active things such as gaps between things
+    | "buffer" // non-active things such as gaps between things
+    | "routine"; // routine actions
   time: {
     start: string;
     end: string;
