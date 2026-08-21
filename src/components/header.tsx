@@ -7,7 +7,7 @@ function Header() {
         {metaData.appName.toUpperCase()}
       </h1>
 
-      <p>{metaData.version}</p>
+      <p className="text-sm md:text-md lg:text-lg">{metaData.version}</p>
     </header>
   );
 }
