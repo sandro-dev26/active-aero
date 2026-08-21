@@ -23,12 +23,16 @@ function Schedule() {
               className={`flex items-center justify-between bg-gray-900 hover:bg-gray-700 p-2 rounded-xs transition-all duration-300 ${showFull && "flex-col justify-center items-start"}`}
             >
               <h3>{item.title}</h3>
+              <span className="hidden md:block bg-gray-500 text-xs md:text-sm lg:text-md p-1 rounded-md">
+                {item.activityType}
+              </span>
+
               <div
                 className={`flex gap-4 md:gap-6 lg:gap-8 ${showFull && "flex-col"}`}
               >
-                <p>
+                <span>
                   {item.time.start} - {item.time.end}
-                </p>
+                </span>
                 {showFull ? (
                   <div>
                     <h4>Weekdays:</h4>
@@ -39,16 +43,16 @@ function Schedule() {
                     </ul>
                   </div>
                 ) : item.weekdays[0] !== "All" ? (
-                  <p>Custom</p>
+                  <span>Custom</span>
                 ) : (
-                  <p>All</p>
+                  <span>All</span>
                 )}
                 {showFull && (
                   <>
-                    <p>{item.weekdayAll ? "All Week" : "Custom"}</p>
-                    <p>
+                    <span>{item.weekdayAll ? "All Week" : "Custom"}</span>
+                    <span>
                       {item.isImportant ? "Important" : "Not too important"}
-                    </p>
+                    </span>
                   </>
                 )}
               </div>
